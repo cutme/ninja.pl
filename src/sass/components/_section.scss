@@ -2,6 +2,20 @@
 	@extend %rel;
 	min-height: 100vh;
 	background-color: $color-black;
+	
+	
+	&--padding-left {
+		padding-left: 120px;
+		overflow: hidden;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-left: 100px;
+		}
+		
+		@media screen and ( max-width: 480px ) {
+			padding-left: grid(80, 480);
+		}
+	}
 
 	&__background-image {
 		@extend %abs-expand;

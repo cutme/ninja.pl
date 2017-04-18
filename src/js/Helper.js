@@ -3,7 +3,8 @@
 
 	var Helper = function() {
         return {
-        	exist: exist
+        	exist: exist,
+        	fixel: fixel
         };
     };
 
@@ -14,9 +15,10 @@
 
 	function fixel() {
 		
-		var bar = document.getElementById('bar'),
-			barTop = $(bar).position().top,
+		var logo = document.getElementById('logo'),
 			pos = $(window).scrollTop(),
+			why = document.getElementById('why'),
+			whyPos = $(why).scrollTop(),
 			ww = $(window).width();
 			
 		function changeIconsColor() {
@@ -33,11 +35,21 @@
 		
 		$(window).on('scroll', function() {
 		
+		
 			pos = $(window).scrollTop();
+			whyPos = $(why).position().top;
 			
+			if (pos >= whyPos) {
+				$(logo).addClass('is-fixed');
+			} else {
+				$(logo).removeClass('is-fixed is-visible');
+			}
 			
-
-			console.log(barTop + ' / ' + pos);
+			if (pos >= whyPos + 100) {
+				$(logo).addClass('is-visible');
+			}
+			
+			console.log(whyPos + ' / ' + pos);
 			
 		});
 		

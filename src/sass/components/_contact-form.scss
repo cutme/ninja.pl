@@ -1,0 +1,138 @@
+.c-contact-form {
+	//left: 840px; 
+	position: relative;
+	
+		
+	@media screen and ( min-width: $smartphone + 1 + px ) {
+		position: absolute;
+		top: 55px;
+		right: 40px;
+		width: 200px;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		margin: 0 auto;
+		width: 80%;
+	}
+	
+	&__row {
+		@extend %clear;
+		margin-bottom: 7px;
+	}
+	
+	&__field {
+		@extend %rel;
+		@extend %clear;
+		height: 28px;
+		
+		&:after,
+		&:before {
+			@extend %abs-after;
+			display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		}
+		
+		&:before {
+			left: -15px;
+		    border-width: 0 0 28px 15px;
+		    border-color: transparent transparent white transparent;
+		}
+		
+		&:after {
+		    border-width: 28px 15px 0 0;
+		    border-color: white transparent transparent transparent;
+		}
+		
+		&--1 {
+			@media screen and ( min-width: $smartphone + 1 + px ) {
+				margin-left: 30px;
+			}
+		}
+		
+		&--2 {
+			@media screen and ( min-width: $smartphone + 1 + px ) {
+				width: 160px;
+			}
+		}
+		
+		&--3 {
+			@media screen and ( min-width: $smartphone + 1 + px ) {
+			    width: 145px;
+				margin-left: 15px;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+			    width: 90%;
+				margin-left: 15px;
+			}
+
+			&:before {
+				left: -35px;
+			    border-width: 0 0 100px 35px;
+			    border-color: transparent transparent white transparent;
+			}
+			
+			&:after {
+			    border-width: 100px 35px 0 0;
+			    border-color: white transparent transparent transparent;
+			}
+		}
+		
+		
+	}
+	
+	&__submit {
+		position: absolute;
+		right: 30px; bottom: -20px; z-index: 10;
+		height: 40px;
+		background-color: black;
+
+		button {
+			background-color: black;
+			font-size: em(34) !important;
+		}
+		
+		&:after,
+		&:before {
+			@extend %abs-after;
+			top: 0;
+			display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		}
+		
+		&:before {
+			left: -15px;
+			border-width: 0 0 40px 15px;
+		    border-color: transparent transparent black transparent;
+		}
+		
+		&:after {
+			right: -15px;
+			border-width: 40px 15px 0 0;
+			border-color: black transparent transparent transparent;
+		}
+	}
+	
+	input[type=text] {
+		height: 28px;
+		padding: 0;
+		padding-top: 4px;
+	}
+	
+	input[type=text],
+	textarea {
+		float: left;
+		background-color: white;
+		color: $color-black;
+		font-size: em(16);
+	}
+	
+	textarea {
+		height: 100px;
+		line-height: 1;
+	}
+}

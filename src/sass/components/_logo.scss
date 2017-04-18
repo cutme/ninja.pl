@@ -1,9 +1,46 @@
 .c-logo {
-	position: fixed;
+	//position: fixed;
+	position: absolute;
 	z-index: 10;
-	left: 70px; top: 50px;
+	left: 60px; 
 	width: grid(126);
 	display: block;
+
+	&--bottom {
+		top: 100px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: none;
+		}
+	}
+
+	&--top {
+		top: 50px;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			left: 40px; top: 20px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: grid(100, $tablet_portrait);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			left: 10px; top: 0;
+		}
+	}
+	
+	&.is-fixed {
+		transform: translateX(-100%);
+		position: fixed;
+		opacity: 0;
+		
+		&.is-visible {
+			@extend %anim;
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
 	
 	img {
 		width: 100%; height: 119px;
@@ -13,16 +50,6 @@
 		width: 160px;
 	}
 	
-	@media screen and ( max-width: $tablet + px ) {
-		left: 40px; top: 20px;
-	}
 	
-	@media screen and ( max-width: $tablet_portrait + px ) {
-		width: grid(100, $tablet_portrait);
-	}
-	
-	@media screen and ( max-width: $smartphone + px ) {
-		left: 20px; top: 0;
-	}
 	
 }

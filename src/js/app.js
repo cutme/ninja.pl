@@ -11,7 +11,7 @@
 	
 
 	$(document).ready(function() {
-		//cutme.helper.exist('#bar') && cutme.helper.fixel();
+		cutme.helper.exist('#logo') && cutme.helper.fixel();
 		//cutme.helper.exist('#form') && cutme.Form.init();
 	});
 

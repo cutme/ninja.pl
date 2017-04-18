@@ -39,26 +39,23 @@ input {
 	}
 }
 
-input {
-	&[type=text],
-	&[type=email],
-	&[type=tel] {
-		width: 100%;
-		line-height: 1;
-		color: $color-black;
-		font: {
-			family: $orator;
-			size: em(24);
-			weight: $medium;
-		}
-		
-		@media screen and ( max-width: $base + px ) {
-		    font-size: 1.25vw;
-		}
-		
-		@media screen and ( max-width: $tablet_portrait + px ) {
-		    font-size: 13px;
-		}
+input[type=text],
+input[type=email],
+textarea {
+	width: 100%;
+	color: $color-black;
+	font: {
+		family: $orator;
+		size: em(24);
+		weight: $medium;
+	}
+	
+	@media screen and ( max-width: $base + px ) {
+	    font-size: 1.25vw;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+	    font-size: 13px;
 	}
 }
 
@@ -72,6 +69,7 @@ input {
 }
 
 textarea {
+	padding: 10px 0;
 	resize: none;
 	overflow: auto;
 }

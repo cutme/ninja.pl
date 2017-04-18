@@ -30,10 +30,7 @@
 	
 	@media screen and ( max-width: $smartphone + px ) {
 		width: 75%;
-	}
-	
-	
-	
+	}	
 	
 	&:before {
 		@extend %abs-after;

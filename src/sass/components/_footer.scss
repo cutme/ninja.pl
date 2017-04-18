@@ -1,0 +1,24 @@
+.c-footer {
+	@extend %rel;
+	@extend %clear;
+	min-height: 300px;
+	background: {
+		image: url(../img/bg/footer.png);
+		repeat: no-repeat;
+		color: $color-red;
+	}
+
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		background-image: none;
+	}
+
+	@media screen and ( max-width: $smartphone + px ) {
+		text-align: center;
+		padding: {
+			top: 40px;
+			bottom: 40px;
+		}
+		
+	}
+}
+

@@ -1,0 +1,90 @@
+.c-contact {
+	
+	//left: 390px;
+	left: 50%;
+	top: 60px;
+	transform: translateX(-50%);
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		left: 40px;
+		transform: none;
+	}
+	
+	@media screen and ( min-width: $smartphone + 1 + px ) {
+		position: absolute; z-index: 5;
+	}
+	
+	h3 {
+		@include antialias;
+		@extend %rel;
+		margin-bottom: 20px;
+		font: {
+			family: $knucklebones;
+			size: em(34);
+		}
+		color: white;
+		
+		&:after {
+			@extend %abs-after;
+			top: -30px;
+			left: 140px;
+			width: 200px; height: 75px;
+			background: {
+				image: url(../img/icons/ninja.svg);
+				repeat: no-repeat;
+			}
+			
+			@media screen and ( max-width: $tablet + px ) {
+				width: 140px;
+				top: -10px;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				display: none;
+			}
+		}
+	}
+	
+	&__email {
+		float: left;
+		border-bottom: 1px solid white;
+		margin-top: 6px;
+		font-size: em(17);
+		color: white;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font-size: em(15);
+		}
+		
+	}
+	
+	&__social {
+		@extend %clear;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			width: 300px;
+			margin: 0 auto 40px auto; 
+		}
+	}
+	
+	&__twitter {
+		float: left;
+		width: 60px; 
+		margin-right: 15px;
+		padding: 5px 20px 5px 0;
+		border-right: 2px solid white;
+		
+		img {
+			@extend %img;
+		}
+	}
+
+	address {
+		margin-bottom: 20px;		
+		
+		p {
+			font-size: em(14);
+			color: black;
+		}
+	}
+}
