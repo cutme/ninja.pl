@@ -1,7 +1,7 @@
 .c-section {
 	@extend %rel;
 	min-height: 100vh;
-	background-color: red;
+	background-color: $color-black;
 
 	&__background-image {
 		@extend %abs-expand;
