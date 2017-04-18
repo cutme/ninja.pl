@@ -1,0 +1,56 @@
+.c-bar {
+	@extend %abs;
+	@include antialias;
+	top: 90px; right: 0;
+	width: 80%;
+	line-height: 1;
+	overflow: hidden;
+	padding: {
+		right: calc((100% - 1600px) / 2);
+		top: 5px;
+		bottom: 5px;
+	}
+	text: {
+		align: right;
+		transform: uppercase;
+	}
+	font: {
+		family: $knucklebones;
+		size: em(50);
+	}
+	
+	@media screen and ( max-width: 1920px ) {
+		padding-right: calc((100% - 83%) / 2);
+		font-size: 2.6vw;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		font-size: em(24);
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		width: 75%;
+	}
+	
+	
+	
+	
+	&:before {
+		@extend %abs-after;
+		left: 0; top: 0;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 15px 66px 0;
+		border-color: transparent $color-red transparent transparent;
+	}
+	
+	&:after {
+		@extend %abs-after;
+		right: 0; top: 0;
+		z-index: -1;
+		width: calc(100% - 15px); height: 100%;
+		background-color: $color-red;
+	}
+}

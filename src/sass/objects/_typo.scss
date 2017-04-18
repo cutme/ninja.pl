@@ -1,0 +1,75 @@
+.o-typo {
+	a {
+		border-bottom: 2px solid $color-red;
+	}
+	
+	h3 {
+		margin-bottom: 40px;
+		font: {
+			size: em(36);
+			weight: $semibold;
+		}
+		
+		@media screen and ( max-width: $base + px ) {
+			font-size: 1.88vw;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(18);
+		}
+	}
+	
+	p {
+		//margin-bottom: 30px;
+		font-size: em(22);		
+
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + px ) {
+			font-size: 1.14vw;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(16);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(14);
+		}
+	}
+	
+	strong {
+		color: $color-red;
+	}
+	
+	.text-medium {
+		font-size: em(29);
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + px ) {
+			font-size: 1.5vw;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(18);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(16);
+		}
+	}
+	
+	.text-big {
+		font-size: em(33);
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + px ) {
+			font-size: 1.72vw;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(20);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(18);
+		}
+	}
+}
+

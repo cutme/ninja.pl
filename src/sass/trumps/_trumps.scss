@@ -1,0 +1,41 @@
+.align-center {
+	text-align: center;
+}
+
+.hv {
+	@extend %abs;
+	left: calc(100% + 18%);
+	top: 80px;
+	bottom: 0;
+	width: grid(5, $desktop); height: calc(100% - 140px);
+	background-color: $color-red;
+	
+	&:after {
+		@extend %abs-after;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50px; height: 50px;
+		background: {
+			image: url(../img/icons/x.svg);
+			size: 100% auto;
+			repeat: no-repeat;
+		}
+		
+		@media screen and ( max-width: $desktop + px ) {
+			width: 40px;
+		}
+		
+		@media screen and ( max-width: 1200px ) {
+			width: 30px;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		display: none;
+	}
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+

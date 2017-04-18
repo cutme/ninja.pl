@@ -1,0 +1,21 @@
+.c-ninjafight {
+	@extend %abs;
+	top: 50px; right: 70px;
+	width: grid(280);
+	
+	@media screen and ( min-width: $base + 1 + px ) {
+		width: 280px;
+	}
+	
+	@media screen and ( max-width: 1200px ) {
+		top: 80px;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		top: 40px; right: 40px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: grid(200, $tablet_portrait);
+	}
+}

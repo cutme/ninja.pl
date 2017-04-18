@@ -1,0 +1,32 @@
+input {
+	@extend %anim;
+	&[type=text],
+	&[type=email],
+	&[type=tel] {
+		//height: 56px;
+		padding: 15px 20px 10px 20px;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+		font: {
+			family: $orator;
+			//size: 14px;
+			weight: $medium;
+		}
+		
+		.has-error & {
+			border-color: $color-red !important;
+		}
+	}
+}
+
+
+button {
+	@include antialias;
+	max-height: 56px;
+	line-height: 1;
+	font-style: italic;
+	text-transform: uppercase;
+	font-family: $aliens;
+}

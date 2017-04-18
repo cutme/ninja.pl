@@ -1,0 +1,21 @@
+{
+  "name": "ninja",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "withpassion"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  	"jquery": "^3.1.1",
+    "webfontloader": "^1.6.27"
+  }
+}

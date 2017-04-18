@@ -1,0 +1,47 @@
+.o-wrap {
+	@extend %rel; 
+	max-width: 1600px;
+	margin: 0 auto;
+	
+	@media screen and ( max-width: $base + px ) {
+		width: grid(1600, 1920);
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		width: grid(984, 1024);
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		width: 100%;
+	}
+	
+	&--flex {
+		
+		padding-bottom: 80px;
+		
+		@media screen and ( min-width: $smartphone + 1 + px ) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	
+	&--padding1 {
+		padding-top: 170px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ) {
+			padding-top: 140px;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-top: 120px;
+		}
+	}
+
+	&--padding2 {
+		padding-top: 245px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-top: 160px;
+		}
+	}
+}

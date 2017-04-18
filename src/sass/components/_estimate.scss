@@ -1,0 +1,181 @@
+.c-estimate {
+	
+	width: 100%;
+//	padding-top: 300px;
+	text-align: center;
+	
+	@media screen and ( min-width: $smartphone + 1 + px ) {
+		position: absolute; z-index: 5;
+		bottom: 0;
+	}
+	
+	button {
+		display: inline-block;
+	}
+	
+	h3 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	&__fields {
+		height: 140px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	&__field {
+		@extend %rel;
+		display: inline-block;
+		height: 56px;
+		overflow: hidden;
+		
+		button,
+		input {
+			height: 100%;
+		}
+		
+		&:after {
+			@extend %abs-after;
+			top: 0;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none;
+			}
+		}
+		
+		&:before {
+			@extend %abs-after;
+			top: 0;
+			z-index: -1;
+			height: 100%;
+		}
+		
+		@media screen and ( min-width: $smartphone + 1 + px ) and  ( max-width: $tablet_portrait + px ) {
+			margin: 0 1%;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 5px;
+		}
+		
+		&--submit {
+			width: grid(220, $desktop);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 31%;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 100%;
+			}
+			
+			&:after {
+				left: 1px;
+				border-width: 0 0 56px 24px;
+			    border-color: transparent transparent $color-green transparent;
+			    color: white;
+			}
+			
+			&:before {
+				right: 0;
+				width: calc(100% - 24px);
+				background-color: $color-green;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					width: 100%;
+				}
+			}
+		}
+		
+		&--email {
+			width: grid(390, $desktop);
+			
+			
+			@media screen and (min-width: $tablet_portrait + 1 + px ) {
+				margin: 0 -10px -10px -20px;
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 31%;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 100%;
+			}
+
+			&:after {
+				left: 0;
+				border-width: 0 0 56px 24px;
+			    border-color: transparent transparent $color-red transparent;
+			}
+			
+			&:before {
+				right: 24px;
+				width: calc(100% - 48px);
+				background-color: $color-red;	
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					right: 0;
+					width: 100%;
+				}			
+			}
+			
+			.corner {
+				@extend %abs;
+				right: 0; top: 0;
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 56px 24px 0 0;
+				border-color: $color-red transparent transparent transparent;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					display: none;
+				}
+			}
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			height: 40px !important;
+		}
+
+		&--url {
+			width: grid(500, $desktop);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 31%;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 100%;
+			}
+			
+			&:after {
+				right: 0;
+				border-width: 56px 24px 0 0;
+				border-color: $color-gray transparent transparent transparent;
+			}
+			
+			&:before {
+				left: 0;
+				width: calc(100% - 24px);
+				background-color: $color-gray;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	
+}

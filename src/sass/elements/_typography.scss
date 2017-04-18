@@ -1,0 +1,42 @@
+body {
+	line-height: 1.3;
+	/*
+-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+*/
+	text-rendering: optimizeSpeed;
+	//@include antialias;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $regular;
+	}
+	color: white;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover,
+    &:active,
+    &:focus {
+        color: inherit;
+        outline: none;
+    }
+}
+
+br {
+	@media screen and ( max-width: $tablet_portrait + px ) {
+	//	display: none;
+	}
+}
+
+strong {
+	font-weight: $bold;
+}
+
+::selection {
+	//background-color: $c-secondary; /* WebKit/Blink Browsers */
+}

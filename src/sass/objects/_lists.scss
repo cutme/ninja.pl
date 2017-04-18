@@ -1,0 +1,40 @@
+.o-list {
+
+	&__dash {
+		margin-bottom: 40px;
+
+		li {
+			@extend %rel;
+			margin-bottom: 30px;
+			padding-left: 20px;
+			
+			&:before {
+				@extend %abs;
+				left: 0; top: 0;
+				font-size: 1vw;
+				content: '-';
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				margin-bottom: 20px;
+				
+				&:before {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+
+	&__why {
+		li {
+			margin-bottom: 40px;
+			
+			
+			@media screen and ( min-width: $smartphone + 1 + px ) {
+				padding-right: grid(300, 1600);	
+			}
+		}
+	}
+}
+

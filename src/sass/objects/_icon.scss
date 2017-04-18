@@ -1,0 +1,89 @@
+.o-icon {
+	@extend %rel;	
+
+	&:after {
+		@extend %abs-after;
+		top: 0; right: 0;
+		background: {
+			size: 100% auto;
+			repeat: no-repeat;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			display: none;
+		}
+	}
+	
+	&--1 {
+		&:after {
+			height: 150px;
+			width: grid(152, $desktop);
+			background: {
+				image: url(../img/icons/cartoon-1.svg);
+			}
+		}
+	}
+	
+	&--2 {
+		&:after {
+			height: 149px;
+			width: grid(139, $desktop);
+			background: {
+				image: url(../img/icons/cartoon-2.svg);
+			}
+		}
+	}
+	
+	&--3 {
+		&:after {
+			height: 144px;
+			width: grid(150, $desktop);
+			background: {
+				image: url(../img/icons/cartoon-3.svg);
+			}
+		}
+	}
+	
+	&--4,
+	&--5 {
+		&:after {
+			top: -80px;
+
+			@media screen and ( max-width: 1400px ) {
+				top: -60px;
+			}
+			
+			@media screen and ( max-width: 1400px ) {
+				top: -30px;
+			}
+		}
+	}
+	
+	&--4 {
+		&:after {
+			height: 163px;
+			width: grid(112, 680);
+			background: {
+				image: url(../img/icons/cartoon-4.svg);
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: grid(112, $desktop);
+			}
+		}
+	}
+	
+	&--5 {
+		&:after {
+			height: 143px;
+			width: grid(144, 680);
+			background: {
+				image: url(../img/icons/cartoon-5.svg);
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: grid(144, $desktop);
+			}
+		}
+	}
+}
