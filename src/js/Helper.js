@@ -35,21 +35,26 @@
 		
 		$(window).on('scroll', function() {
 		
-		
-			pos = $(window).scrollTop();
-			whyPos = $(why).position().top;
-			
-			if (pos >= whyPos) {
-				$(logo).addClass('is-fixed');
+			if ($(why).length>0) {
+				pos = $(window).scrollTop();
+				whyPos = $(why).position().top;
+				
+				if (pos >= whyPos) {
+					$(logo).addClass('is-fixed');
+				} else {
+					$(logo).removeClass('is-fixed is-visible');
+				}
+				
+				if (pos >= whyPos + 100) {
+					$(logo).addClass('is-visible');
+				}
+				
+				console.log(whyPos + ' / ' + pos);
 			} else {
-				$(logo).removeClass('is-fixed is-visible');
+				$(logo).addClass('is-fixed is-visible');
 			}
 			
-			if (pos >= whyPos + 100) {
-				$(logo).addClass('is-visible');
-			}
 			
-			console.log(whyPos + ' / ' + pos);
 			
 		});
 		
